@@ -1,0 +1,8 @@
+{
+    "cmake.sourceDirectory": "${workspaceFolder}",
+    "cmake.copyCompileCommands": "${workspaceFolder}/compile_commands.json",
+    "sonarlint.pathToCompileCommands": "${workspaceFolder}/compile_commands.json",
+    "files.trimTrailingWhitespace": true,
+    "cmake.configureOnOpen": true,
+    "editor.tabSize": 2
+}
