@@ -5,8 +5,13 @@ find_package(GTest CONFIG REQUIRED VERSION 1.14)
 
 # main library
 add_library(text src/text.cpp)
+target_sources(text
+  PUBLIC
+    FILE_SET CXX_MODULES FILES
+      include/text.cxxm
+)
+
 target_link_libraries(text)
-target_include_directories(text PUBLIC ${CMAKE_CURRENT_LIST_DIR}/include)
 log_target_properties(text MODE STATUS)
 
 # tests

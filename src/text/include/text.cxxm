@@ -1,7 +1,11 @@
+module;
+
 #include <string>
 #include <vector>
 
-namespace aux::text {
+export module aux.text;
+
+export namespace aux::text {
 
 /// Returns the string "Hello world!"
 [[nodiscard]] auto get_hello_world() -> std::string;

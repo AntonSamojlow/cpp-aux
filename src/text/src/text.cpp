@@ -1,6 +1,10 @@
-#include <text.h>
+module;
 
 #include <algorithm>
+#include <string>
+#include <vector>
+
+module aux.text;
 
 namespace aux::text {
 
