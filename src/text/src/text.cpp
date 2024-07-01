@@ -13,8 +13,8 @@ auto get_hello_world() -> std::string {
 };
 
 auto concat(std::string const& separator, std::vector<std::string> const& texts) -> std::string {
-	auto binary_fold_op = [separator](std::string&& fold_result, std::string const& next) {
-		return std::move(fold_result) + separator + next;
+	auto binary_fold_op = [separator](std::string fold_result, std::string const& next) { //NOLINT(*value-param)
+		return fold_result += separator + next;
 	};
 
 	return std::ranges::fold_left_first(texts, binary_fold_op).value_or("");

@@ -26,10 +26,12 @@ foreach(property IN LISTS LOGVARS)
 endforeach()
 
 include(src/cmake/log_target_properties.cmake)
+include(src/cmake/enable_clang_tidy.cmake)
+include(src/cmake/target_disable_clang_tidy.cmake)
 
-# if(ENABLE_CLANG_TIDY)
-#   enable_clang_tidy_globally()
-# endif()
+if(ENABLE_CLANG_TIDY)
+  enable_clang_tidy()
+endif()
 
 
 # include sub-projects
