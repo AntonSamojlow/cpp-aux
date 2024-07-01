@@ -12,7 +12,7 @@ auto get_hello_world() -> std::string {
 	return "Hello world!";
 };
 
-auto concat(std::string const& separator, std::vector<std::string> const& texts) -> std::string {
+auto join(std::string const& separator, std::vector<std::string> const& texts) -> std::string {
 	auto binary_fold_op = [separator](std::string fold_result, std::string const& next) { //NOLINT(*value-param)
 		return fold_result += separator + next;
 	};
