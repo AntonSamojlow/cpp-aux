@@ -1,6 +1,9 @@
 # Build directories
 build
 
+# Install directory
+install
+
 # IDE files
 .vs/
 .vscode/*

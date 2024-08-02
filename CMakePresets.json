@@ -15,13 +15,14 @@
 				"strategy": "external"
 			},
 			"binaryDir": "${sourceDir}/build/${presetName}",
-			"installDir": "${sourceDir}/install/${presetName}",
+			"installDir": "${sourceDir}/install",
 			"toolchainFile": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
 			"environment": {
 				"VCPKG_ROOT": "./vcpkg"
 			},
 			"cacheVariables": {
-				"CMAKE_EXPORT_COMPILE_COMMANDS": true
+				"CMAKE_EXPORT_COMPILE_COMMANDS": true,
+				"BUILD_SHARED_LIBS": false
 			}
 		},
 		{

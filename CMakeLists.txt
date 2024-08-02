@@ -9,6 +9,12 @@ project ("cpp-aux"
 
 set(CMAKE_CXX_STANDARD 23)
 
+option(BUILD_SHARED_LIBS "Build using shared libraries" ON)
+
+if(BUILD_SHARED_LIBS)
+  set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+endif()
+
 # log selected cmake vars
 set(LOGVARS
     CMAKE_CXX_COMPILER
@@ -20,6 +26,8 @@ set(LOGVARS
     CMAKE_PREFIX_PATH
     CMAKE_INSTALL_RPATH
     CMAKE_MODULE_PATH
+    BUILD_SHARED_LIBS
+    CMAKE_POSITION_INDEPENDENT_CODE
 )
 foreach(property IN LISTS LOGVARS)
   message(STATUS "${property}=${${property}}")
