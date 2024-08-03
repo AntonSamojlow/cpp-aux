@@ -1,6 +1,6 @@
 {
   "name": "cpp-aux",
-  "version": "0.0.1",
+  "version-semver": "0.0.1-alpha",
   "homepage": "https://github.com/AntonSamojlow/arena/cpp-aux",
   "builtin-baseline": "f7423ee180c4b7f40d43402c2feb3859161ef625",
   "dependencies": [
