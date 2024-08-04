@@ -23,6 +23,4 @@ log_target_properties(text.test MODE STATUS)
 
 
 # install
-if(BUILD_SHARED_LIBS)
-  install(TARGETS text LIBRARY DESTINATION lib)
-endif()
+install(TARGETS text LIBRARY DESTINATION lib)

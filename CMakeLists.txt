@@ -9,7 +9,7 @@ project ("cpp-aux"
 
 set(CMAKE_CXX_STANDARD 23)
 
-option(BUILD_SHARED_LIBS "Build using shared libraries" ON)
+option(BUILD_SHARED_LIBS "Build using shared libraries" OFF)
 
 if(BUILD_SHARED_LIBS)
   set(CMAKE_POSITION_INDEPENDENT_CODE ON)
