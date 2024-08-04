@@ -5,8 +5,12 @@
   "builtin-baseline": "f7423ee180c4b7f40d43402c2feb3859161ef625",
   "dependencies": [
     {
-      "name": "gtest",
-      "version>=": "1.14.0"
+      "name": "vcpkg-cmake",
+      "host": true
+    },
+    {
+      "name": "vcpkg-cmake-config",
+      "host": true
     }
   ]
 }

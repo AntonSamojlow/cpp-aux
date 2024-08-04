@@ -9,7 +9,8 @@ project ("cpp-aux"
 
 set(CMAKE_CXX_STANDARD 23)
 
-option(BUILD_SHARED_LIBS "Build using shared libraries" ON)
+option(BUILD_SHARED_LIBS "Build using shared libraries" OFF)
+option(BUILD_TESTS "Build tests" OFF)
 
 if(BUILD_SHARED_LIBS)
   set(CMAKE_POSITION_INDEPENDENT_CODE ON)
@@ -28,6 +29,7 @@ set(LOGVARS
     CMAKE_MODULE_PATH
     BUILD_SHARED_LIBS
     CMAKE_POSITION_INDEPENDENT_CODE
+    BUILD_TESTS
 )
 foreach(property IN LISTS LOGVARS)
   message(STATUS "${property}=${${property}}")
