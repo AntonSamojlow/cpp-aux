@@ -22,7 +22,7 @@
 			},
 			"cacheVariables": {
 				"CMAKE_EXPORT_COMPILE_COMMANDS": true,
-				"BUILD_TESTS": false
+				"BUILD_TESTS": true
 			}
 		},
 		{
