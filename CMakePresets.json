@@ -22,7 +22,7 @@
 			},
 			"cacheVariables": {
 				"CMAKE_EXPORT_COMPILE_COMMANDS": true,
-				"BUILD_SHARED_LIBS": false
+				"BUILD_TESTS": false
 			}
 		},
 		{
@@ -137,7 +137,6 @@
 			"inherits": "windows",
 			"hidden": true,
 			"cacheVariables": {
-				"CMAKE_C_COMPILER": "cl.exe",
 				"CMAKE_CXX_COMPILER": "cl.exe"
 			},
 			"architecture": {
@@ -155,7 +154,6 @@
 			"inherits": "windows",
 			"hidden": true,
 			"cacheVariables": {
-				"CMAKE_C_COMPILER": "clang-cl.exe",
 				"CMAKE_CXX_COMPILER": "clang-cl.exe"
 			},
 			"architecture": {
@@ -173,7 +171,6 @@
 			"inherits": "unix-like",
 			"hidden": true,
 			"cacheVariables": {
-				"CMAKE_C_COMPILER": "clang-18",
 				"CMAKE_CXX_COMPILER": "clang++-18"
 			},
 			"vendor": {
@@ -187,7 +184,6 @@
 			"inherits": "unix-like",
 			"hidden": true,
 			"cacheVariables": {
-				"CMAKE_C_COMPILER": "gcc-14",
 				"CMAKE_CXX_COMPILER": "g++-14"
 			},
 			"vendor": {
