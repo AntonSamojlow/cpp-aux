@@ -1,9 +1,7 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO AntonSamojlow/cpp-aux
-    REF 0.0.1-alpha
-    SHA512 faa453d3dfda35074177ff4fe39c8358c076d085ba56a889110bc1f70db1a30aaabfdfac589f62a8260d362648d66537c865aedf2db2f6e3f2f31ebf6a955e6b
-    HEAD_REF master
+    HEAD_REF main
 )
 
 vcpkg_cmake_configure(
@@ -11,6 +9,7 @@ vcpkg_cmake_configure(
     OPTIONS
         -DBUILD_TESTS=OFF
 )
-# vcpkg_cmake_install()
-# todo:
-# file(INSTALL "${SOURCE_PATH}/COPYING" DESTINATION "${CURRENT_PACKAGES_DIR}/share/libogg" RENAME copyright)
+vcpkg_cmake_install()
+
+vcpkg_install_copyright(FILE_LIST "${SOURCE_PATH}/LICENSE")
+configure_file("${CMAKE_CURRENT_LIST_DIR}/usage" "${CURRENT_PACKAGES_DIR}/share/${PORT}/usage" COPYONLY)
