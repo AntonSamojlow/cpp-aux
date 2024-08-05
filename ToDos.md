@@ -7,11 +7,11 @@ So how to we distribute them via vcpkg?
 
 Thoughts:
 For a large module with many partitions and implentations:
-A) Compiling the module library to a static one and shipping it.
-B) Compiling the module library to a shared one, wrapping all exports with dllexport-platform specific macros and shipping it. Is this actually worth the trouble??
+A. Compiling the module library to a static one and shipping it.
+B. Compiling the module library to a shared one, wrapping all exports with dllexport-platform specific macros and shipping it. Is this actually worth the trouble?? Seems complicated, see [this post](https://crascit.com/2024/04/04/cxx-modules-cmake-shared-libraries/).
 
 For a "small" module consisting of one of few files, similar to a header-only library:
-C) No precompilation, just shiping the files ./include/**.cxxm and appropriate usage instructions for cmake?
+C) No precompilation, just shiping the files ./include/**.cxxm and appropriate usage instructions for cmake - can this be done?
 
 ## General
 

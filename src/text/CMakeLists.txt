@@ -4,8 +4,9 @@
 add_library(text src/text.cpp)
 target_sources(text
   PUBLIC
-    FILE_SET CXX_MODULES FILES
-      include/text.cxxm
+    FILE_SET CXX_MODULES
+    BASE_DIRS include
+    FILES include/text.cxxm
 )
 
 target_link_libraries(text)
@@ -22,4 +23,8 @@ if(BUILD_TESTS)
 endif()
 
 # install
-install(TARGETS text LIBRARY DESTINATION lib)
+install(TARGETS text
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+  FILE_SET CXX_MODULES DESTINATION include
+  )

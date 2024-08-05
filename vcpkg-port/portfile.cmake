@@ -1,3 +1,6 @@
+# not yet clear how to handle c++ modules and shared libs properly (need to dllexport macro for WIN??)
+vcpkg_check_linkage(ONLY_STATIC_LIBRARY)
+
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO AntonSamojlow/cpp-aux
@@ -8,6 +11,7 @@ vcpkg_cmake_configure(
     SOURCE_PATH "${SOURCE_PATH}"
     OPTIONS
         -DBUILD_TESTS=OFF
+        -DBUILD_SHARED_LIBS=OFF
 )
 vcpkg_cmake_install()
 
